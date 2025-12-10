@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Pastikan mengambil 100% tinggi viewport di HP */
+    min-height: 100vh; 
+    background: #f3d0d7;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.wrapper {
+    text-align: center;
+    padding: 20px;
+    /* Batasi lebar agar tidak terlalu besar di desktop, tapi tetap fleksibel di HP */
+    max-width: 90%; 
+    margin: 0 auto;
+}
+
+/* --- PERBAIKAN: Ubah width ke unit responsif --- */
+.gif {
+    /* Gunakan max-width agar gambar tidak melebihi wadahnya */
+    max-width: 80%; 
+    height: auto;
+    margin-top: 20px;
+    /* Pusatkan gambar */
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+    text-align: center;
+    /* Gunakan em atau vw untuk ukuran font yang sedikit lebih fleksibel */
+    font-size: 1.6em; 
+    color: #e94d58;
+    margin: 15px 0;
+}
+
+.btn-group {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Tombol YES (pakai <a>) */
+.yes-btn {
+    padding: 10px 25px;
+    background: #e94d58;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    box-shadow: 0 2px 4px gray;
+    /* Pastikan ukuran minimal untuk kemudahan klik di HP */
+    min-width: 100px; 
+}
+
+/* Tombol NO */
+.no-btn {
+    padding: 10px 25px;
+    background: white;
+    color: #e94d58;
+    border: 2px solid #e94d58;
+    border-radius: 30px;
+    font-size: 1.2em;
+    box-shadow: 0 2px 4px gray;
+    /* --- PERBAIKAN: Hapus position: absolute; saat init --- */
+    position: static; 
+    /* Pastikan ukuran minimal untuk kemudahan klik di HP */
+    min-width: 100px;
+}
